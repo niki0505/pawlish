@@ -1,0 +1,37 @@
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("./assets/fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: OpenSans-SemiBold;
+  src: url("./assets/fonts/OpenSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("./assets/fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: OpenSans-Medium;
+  src: url("./assets/fonts/OpenSans-Medium.ttf");
+}
+@import "tailwindcss";
+
+@theme {
+  --font-opensans-bold: OpenSans-Bold, "sans-serif";
+  --font-opensans-semibold: OpenSans-SemiBold, "sans-serif";
+  --font-opensans-regular: OpenSans-Regular, "sans-serif";
+  --font-opensans-medium: OpenSans-Medium, "sans-serif";
+}
+
+.navbar-text {
+  @apply text-[16px] text-lg font-opensans-medium tracking-widest text-[rgba(226,103,100,0.30)] hover:text-[#E26764] hover:underline hover:underline-offset-4 hover:decoration-[#E26764];
+}
+
+.navbar-text-selected {
+  @apply text-[16px] text-lg font-opensans-medium tracking-widest text-[#E26764] underline underline-offset-4 decoration-[#E26764];
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-[#E26764] to-[#FDDB87];
+}
