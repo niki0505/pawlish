@@ -15,6 +15,12 @@
   font-family: OpenSans-Medium;
   src: url("./assets/fonts/OpenSans-Medium.ttf");
 }
+
+@font-face {
+  font-family: BobbyJones;
+  src: url("./assets/fonts/BobbyJones-Soft.otf");
+}
+
 @import "tailwindcss";
 
 @theme {
@@ -22,16 +28,37 @@
   --font-opensans-semibold: OpenSans-SemiBold, "sans-serif";
   --font-opensans-regular: OpenSans-Regular, "sans-serif";
   --font-opensans-medium: OpenSans-Medium, "sans-serif";
+  --font-bobbyjones-soft: BobbyJones, "sans-serif";
 }
 
 .navbar-text {
-  @apply text-[16px] text-lg font-opensans-medium tracking-widest text-[rgba(226,103,100,0.30)] hover:text-[#E26764] hover:underline hover:underline-offset-4 hover:decoration-[#E26764];
+  @apply text-[16px] text-lg font-opensans-semibold tracking-widest text-[rgba(226,103,100,0.30)] hover:text-[#E26764] hover:underline hover:underline-offset-4 hover:decoration-[#E26764];
 }
 
 .navbar-text-selected {
-  @apply text-[16px] text-lg font-opensans-medium tracking-widest text-[#E26764] underline underline-offset-4 decoration-[#E26764];
+  @apply text-[16px] text-lg font-opensans-semibold tracking-widest text-[#E26764] underline underline-offset-4 decoration-[#E26764];
 }
 
 .gradient-bg {
   @apply bg-gradient-to-r from-[#E26764] to-[#FDDB87];
+}
+
+.icon-white {
+  @apply text-white drop-shadow-lg cursor-pointer hover:text-gray-200;
+}
+
+.footer-body-text {
+  @apply text-white font-opensans-semibold tracking-widest text-shadow-lg;
+}
+
+/* White text with black outline */
+.text-outline-white {
+  @apply text-white font-bold;
+  -webkit-text-stroke: 1px black;
+}
+
+/* Gradient text with black outline */
+.text-outline-gradient {
+  @apply bg-gradient-to-r from-[#E26764] to-[#FDDB87] bg-clip-text text-transparent text-3xl;
+  -webkit-text-stroke: 1px black;
 }
