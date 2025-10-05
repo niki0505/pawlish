@@ -1,12 +1,24 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import Paw from "../assets/paw-print.png";
 const Navbar = () => {
   const location = useLocation();
   return (
-    <nav className="bg-[#FAEEE7] flex items-center justify-around py-5 px-32 fixed top-0 left-0 w-full">
+    <nav className="bg-[#FAEEE7] flex items-center justify-around py-2 px-32 fixed top-0 left-0 w-full z-40">
       <Link to="/">
         <span className="font-semibold text-lg flex items-center gap-3 text-[#E26764]">
-          <span>Pawlish</span>
+          <img src={Paw} alt="Logo" className="w-25 h-25" />
+          <div className="flex flex-col items-center gap-0">
+            <p className="text-outline-gradient font-bobbyjones-soft text-5xl">
+              Pawlish
+            </p>
+            <p
+              className="text-[#E16162] font-opensans-bold text-1xl"
+              style={{ WebkitTextStroke: "0.8px black" }}
+            >
+              MOBILE PET GROOMING
+            </p>
+          </div>
         </span>
       </Link>
       <div className="flex items-center gap-10 ">

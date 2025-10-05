@@ -51,14 +51,28 @@
   @apply text-white font-opensans-semibold tracking-widest text-shadow-lg;
 }
 
+.input-field {
+  @apply bg-white border-2 border-black rounded-[7px] w-[450px] p-[5px] drop-shadow-lg;
+}
+
+.button-red {
+  @apply cursor-pointer w-[110px] bg-[#E26764] border-black font-opensans-bold text-lg hover:bg-[#D15553];
+}
+
 /* White text with black outline */
 .text-outline-white {
   @apply text-white font-bold;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 0.7px black;
+}
+
+/* Red text with black outline */
+.text-outline-red {
+  @apply text-[#E26764] font-bold;
+  -webkit-text-stroke: 0.7px black;
 }
 
 /* Gradient text with black outline */
 .text-outline-gradient {
-  @apply bg-gradient-to-r from-[#E26764] to-[#FDDB87] bg-clip-text text-transparent text-3xl;
-  -webkit-text-stroke: 1px black;
+  @apply bg-gradient-to-r from-[#E26764] to-[#FDDB87] bg-clip-text text-transparent;
+  -webkit-text-stroke: 0.7px black;
 }

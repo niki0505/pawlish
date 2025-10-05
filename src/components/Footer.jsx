@@ -16,7 +16,7 @@ const Footer = () => {
               className="bg-white border border-black rounded-[7px] w-[400px] h-[40px] p-[5px]"
               placeholder="Enter email..."
             />
-            <button className="cursor-pointer w-[110px] relative left-[-87px] bg-[#E26764] border border-black rounded-r-[7px] text-outline-white font-opensans-bold text-lg hover:bg-[#D15553]">
+            <button className="relative left-[-87px] text-outline-white button-red rounded-r-[7px] border">
               Subscribe
             </button>
           </div>
