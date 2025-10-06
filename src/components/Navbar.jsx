@@ -4,7 +4,7 @@ import Paw from "../assets/paw-print.png";
 const Navbar = () => {
   const location = useLocation();
   return (
-    <nav className="bg-[#FAEEE7] flex items-center justify-around py-2 px-32 fixed top-0 left-0 w-full z-40">
+    <nav className="bg-[#FAEEE7] flex items-center justify-around py-2 fixed top-0 left-0 w-full z-40">
       <Link to="/">
         <span className="font-semibold text-lg flex items-center gap-3 text-[#E26764]">
           <img src={Paw} alt="Logo" className="w-25 h-25" />
