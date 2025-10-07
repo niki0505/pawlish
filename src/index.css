@@ -76,3 +76,95 @@
   @apply bg-gradient-to-r from-[#E26764] to-[#FDDB87] bg-clip-text text-transparent;
   -webkit-text-stroke: 0.7px black;
 }
+
+/*------------------------------------HOME STYLES------------------------------------*/
+
+.thumbnail-img {
+  @apply w-120 h-95 border-2 rounded-md shadow-[0_4px_4px_rgba(0,0,0,0.25)];
+}
+
+.pet-care-label {
+  @apply bg-gradient-to-r from-[#FDDB87] to-[#E26764] border-2 rounded-md w-40 px-4 py-1 shadow-[0_4px_4px_rgba(0,0,0,0.25)];
+}
+
+.pet-care-text {
+  @apply text-2xl;
+}
+
+.pet-care-icon-container {
+  @apply w-20 h-20 bg-white rounded-full border ml-[-20px] flex justify-center items-center;
+}
+
+.pet-care-icon {
+  @apply w-12 h-12;
+}
+
+.pet-grooming-label {
+  @apply bg-gradient-to-r from-[#FDDB87] to-[#E26764] border-2 rounded-md w-45 px-4 py-1 flex flex-col shadow-[0_4px_4px_rgba(0,0,0,0.25)];
+}
+
+.pet-grooming-icon-container {
+  @apply w-20 h-20 bg-white rounded-full border absolute -top-2 -left-8 flex justify-center items-center shadow-md;
+}
+
+.pet-grooming-icon {
+  @apply w-12 h-12;
+}
+
+.text-content {
+  @apply flex flex-col;
+}
+
+.about-us-button {
+  @apply cursor-pointer bg-[#f57474] hover:bg-[#D15553] border-2 border-black rounded-md px-22 py-1 mt-2 shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-xl;
+}
+
+.welcome-message {
+  @apply font-opensans-semibold text-justify tracking-widest leading-normal text-[1rem] mt-4 px-38;
+}
+
+.brand-name {
+  @apply underline italic text-[#F57474] font-opensans-bold;
+}
+
+.home-text-stroke {
+  @apply text-white font-bold;
+  -webkit-text-stroke: 1.3px black;
+}
+
+/* Specific styling for text elements */
+.home-snip-text {
+  @apply font-bobbyjones-soft text-7xl;
+  -webkit-text-stroke: 2px black;
+  background: linear-gradient(90deg, #f57474 20%, #fddb87 35%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.home-hooray-text {
+  @apply font-bobbyjones-soft text-9xl;
+  -webkit-text-stroke: 2px black;
+  background: linear-gradient(90deg, #f57474 40%, #fddb87 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.home-groomingcomes-text {
+  @apply font-bobbyjones-soft text-6xl;
+  -webkit-text-stroke: 2px black;
+  background: linear-gradient(90deg, #f57474 10%, #fddb87 45%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.home-yourway-text {
+  @apply font-bobbyjones-soft text-7xl;
+  -webkit-text-stroke: 2px black;
+  background: linear-gradient(90deg, #f57474 15%, #fddb87 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
