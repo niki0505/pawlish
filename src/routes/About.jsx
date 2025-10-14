@@ -6,7 +6,7 @@ const About = () => {
       <main className="flex-1 overflow-auto">
         <div className="flex flex-col justify-around items-center pt-40">
           {/* Code here */}
-          <p>About</p>
+          <p>HELLO</p>
         </div>
       </main>
       <Footer />
