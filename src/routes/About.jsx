@@ -40,6 +40,7 @@ const About = () => {
     bannerContent: {
       zIndex: 10,
       padding: '0 20px',
+      textAlign: 'center',
     },
     bannerTitle: {
       fontSize: '3rem',
@@ -54,14 +55,15 @@ const About = () => {
     bannerSubtitle: {
       fontSize: '1.1rem',
       fontWeight: '500',
-      maxWidth: '600px',
+      maxWidth: '800px',
       lineHeight: '1.4',
+      WebkitTextStroke: '0.5px #000000'
     },
     storySection: {
-      width: '80%',
-      maxWidth: '900px',
+      width: '100%',
       textAlign: 'center',
       marginBottom: '60px',
+      padding:'0px 200px'
     },
     storyTitleBox: {
       display: 'flex',
@@ -69,6 +71,7 @@ const About = () => {
       alignItems: 'center',
       gap: '10px',
       margin: '20px 0 30px',
+      
     },
     storyLetter: {
       fontSize: '1.5rem',
@@ -97,6 +100,10 @@ const About = () => {
       borderRadius: '10px',
       boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
       textAlign: 'justify',
+      outline: '5px solid #010A09FF', // Example color (blue)
+      outlineOffset: '2px', // Optional: adds spacing between border and outline
+      marginTop: '80px',
+      marginBottom: '100px',
     },
     cardsContainer: {
       display: 'flex',
@@ -115,6 +122,8 @@ const About = () => {
       boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
       position: 'relative',
       textAlign: 'center',
+      outline: '5px solid #010A09FF',
+      outlineOffset: '2px',
     },
     cardImagePlaceholder: {
       width: '100%',
@@ -131,7 +140,7 @@ const About = () => {
     },
     cardTitle: {
       fontFamily: '"BobbyJones", sans-serif',
-      color: '#D32F2F', 
+      color: '#F57474', 
       fontSize: '2rem',
       fontWeight: '800',
       letterSpacing: '5px',
@@ -143,19 +152,19 @@ const About = () => {
     },
     cardPawIconLeft: {
       position: 'absolute',
-      top: '-20px',
-      right: '280px',
-      width: '100px',    
-      height: '100px',
+      top: '-55px',
+      right: '480px',
+      width: '130px',    
+      height: '130px',
       objectFit: 'contain',
       filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))', 
     },
     cardPawIconRight: {
       position: 'absolute',
-      top: '-20px',
+      top: '-55px',
       right: '-40px',
-      width: '100px', 
-      height: '100px',
+      width: '130px', 
+      height: '130px',
       objectFit: 'contain',
       filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))', 
     },
@@ -171,10 +180,11 @@ const About = () => {
       maxWidth: '900px',
       margin: '50px 0 80px',
       padding: '30px',
-      border: '3px dashed #E57373',
       borderRadius: '15px',
       backgroundColor: 'white',
       boxShadow: '0 4px 15px rgba(229, 115, 115, 0.2)',
+      outline: '5px solid #010A09FF', // Example color (blue)
+      outlineOffset: '2px', // Optional: adds spacing between border and outline
     },
     whyTitle: {
       fontSize: '2rem',
@@ -191,17 +201,17 @@ const About = () => {
     advantageItem: {
       display: 'flex',
       alignItems: 'center',
-      fontSize: '1.1rem',
+      fontSize: '1.5rem',
       marginBottom: '15px',
       lineHeight: '1.4',
     },
-  checkIcon: {
-  width: '24px',
-  height: '24px',
-  marginRight: '15px',
-  objectFit: 'contain',
-  verticalAlign: 'middle',
-},
+    checkIcon: {
+    width: '24px',
+    height: '24px',
+    marginRight: '15px',
+    objectFit: 'contain',
+    verticalAlign: 'middle',
+    },
 
 
 
@@ -212,17 +222,15 @@ const About = () => {
     <div className="min-h-screen bg-[#FAEEE7] flex flex-col">
       <main className="flex-1 overflow-auto">
         <div className="flex flex-col justify-around items-center pt-40">
-          <div style={styles.container}>
-
-            <section style={styles.bannerSection}>
-              <div style={styles.bannerContent}>
-                <h1 style={{...styles.bannerSubtitle, fontSize: '85px', WebkitTextStroke: '4px #000000',}}>BEHIND THE PAWS</h1>
-                <p style={{...styles.bannerSubtitle,  fontFamily: 'OpenSans-SemiBold', marginTop: '10px' }}>
+            <section style={{...styles.bannerSection, fontFamily: "BobbyJones", fontSize: '200px'}}>
+              <div style={{...styles.bannerContent, width: '100%', marginLeft: '350px', marginRight: '350px'}}>
+                <h1 style={{...styles.bannerSubtitle, fontSize: '100px', WebkitTextStroke: '4px #000000',}}>BEHIND THE PAWS</h1>
+                <p style={{...styles.bannerSubtitle,  fontFamily: 'OpenSans-SemiBold', marginTop: '10px', fontSize: '25px'}}>
                   Meet the compassionate team whose love for animals inspires every gentle touch, careful trim, and happy wag.
                 </p>
               </div>
             </section>
-
+          <div style={styles.container}>
             <section style={styles.storySection}>
               <div style={styles.storyTitleBox}>
                 <div style={{ ...styles.storyLine, width: '60px' }}></div>
@@ -236,7 +244,7 @@ const About = () => {
                 <div style={{ ...styles.storyLine, width: '60px' }}></div>
               </div>
 
-              <div style={{...styles.storyText, fontFamily: 'OpenSans-SemiBold'}}>
+              <div style={{...styles.storyText, fontFamily: 'OpenSans-SemiBold', fontSize: '25px'}}>
                 <p>
                   Our mobile grooming story began with a simple dream—to make pets feel loved, safe, and cared for right at their doorstep. We saw how stressful trips to the grooming shop could be, so we brought the shop to them. With every wag, purr, and happy face, we're reminded that grooming isn't just about looking good—it's about creating comfort, trust, and joy for pets and their families.
                 </p>
@@ -250,18 +258,18 @@ const About = () => {
                     <img src={m} alt="Mission Team" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <h3 style={{...styles.cardTitle, fontSize: '50px', WebkitTextStroke: '2px #000000'}}>MISSION</h3>
-                  <p style={{...styles.cardText, fontFamily: 'OpenSans-SemiBold'}}>
+                  <p style={{...styles.cardText, fontFamily: 'OpenSans-SemiBold', fontSize: '25px'}}>
                     To deliver gentle, high-quality, and stress-free grooming that makes every pet feel loved and every owner confident.
                   </p>
                 </div>
 
-                <div style={styles.card}>
+                <div style={{...styles.card}}>
                   <img src={rp} alt="Paw Icon" style={styles.cardPawIconRight} />
-                  <div style={{ ...styles.cardImagePlaceholder, backgroundColor: '#FFDCE0' }}>
+                  <div style={{ ...styles.cardImagePlaceholder, backgroundColor: '#FFDCE0'}}>
                     <img src={v} alt="Vision Team" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <h3 style={{...styles.cardTitle, fontSize: '50px', WebkitTextStroke: '2px #000000'}}>VISION</h3>
-                  <p style={{...styles.cardText, fontFamily: 'OpenSans-SemiBold'}}>
+                  <p style={{...styles.cardText, fontFamily: 'OpenSans-SemiBold', fontSize: '25px'}}>
                     To be the community's trusted grooming home, where every pet feels happy and pampered.
                   </p>
                 </div>
@@ -269,7 +277,7 @@ const About = () => {
             </section>
 
             <section style={styles.whyChooseUsSection}>
-              <h2 style={{...styles.whyTitle, color: "#F57474", fontSize: '40px', marginLeft: '20px', WebkitTextStroke: '1.5px #000000',}}>WHY CHOOSE US?</h2>
+              <h2 style={{...styles.whyTitle, color: "#F57474", fontSize: '50px', marginLeft: '20px', WebkitTextStroke: '1.5px #000000',}}>WHY CHOOSE US?</h2>
               <ul style={{...styles.advantagesList, marginLeft: '50px'}}>
                 <li style={{...styles.advantageItem, fontFamily: 'OpenSans-SemiBold'}} >
                   <img src={c} alt="Check Icon" style={styles.checkIcon} />
