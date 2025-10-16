@@ -208,7 +208,7 @@
 
 .services-book-button {
   @apply cursor-pointer bg-[#E26764] hover:bg-[#D15553];
-  width: 130px;
+  width: 180px;
   height: 35px;
 }
 
@@ -216,7 +216,6 @@
   @apply cursor-pointer bg-[#f57474] hover:brightness-90;
 ;
 }
-
 
 .text-outline-white2 {
   @apply text-white font-extrabold text-3xl;
