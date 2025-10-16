@@ -36,13 +36,31 @@ const Services = () => {
 };
 
   //Carousel Layout
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
-  };
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024, 
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768, 
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+};
 
 
 
@@ -94,12 +112,12 @@ const Services = () => {
           </div>
       
           {/* //Carousel  */}
-          <div className='carousel-container w-2/4 mb-20 '>
+          <div className='carousel-container w-3/4 mb-20 '>
             <div >
               {/* //setting for showing ng carousel layout */}
               <Slider {...settings}> 
                 {data.map((d) => (
-                  <div key={d.name} className="h-auto  text-black rounded-xl ">
+                  <div key={d.name} className="h-auto text-black rounded-xl ">
 
                     {/* //box containing image */}
                     <div className='h-[300px] rounded-xl m-5 border-3 border-black shadow-[0_9px_8px_rgba(0,0,0,0.25)] mb-10'>
@@ -114,16 +132,16 @@ const Services = () => {
                     </div>
 
                     {/* //box containing details */}
-                    <div className="flex flex-col h-[450px]  w-auto items-center justify-center gap-4 p-4 border-3 border-black rounded-xl bg-white mx-5 shadow-[0_9px_8px_rgba(0,0,0,0.25)] mb-10">
+                      <div className="flex flex-col w-auto justify-center items-center gap-4 p-4 border-3 border-black rounded-xl bg-white mx-5 shadow-[0_9px_8px_rgba(0,0,0,0.25)] mb-10 ">
                       <p className="text-outline-white4"> Inclusion</p>                    
-                      <ul className="text-left text-sm">
+                      <ul className="text-left text-sm break-words w-full">
                         {allInclusions.map((item, index) => (
-                          <li key={index} className="flex items-center gap-2 text-lg text-gray-500 font-opensans-semibold">
+                          <li key={index} className="flex items-center gap-2 ml-5 text-lg text-gray-500 font-opensans-semibold">
                             <span>
                               {d.inclusions.includes(item) ? (
-                                <img src={check} alt="check" className="w-4 h-4" />
+                                <img src={check} alt="check" className="w-6 h-6" />
                               ) : (
-                                <img src={ekis} alt="check" className="w-3 h-3 mr-1" />
+                                <img src={ekis} alt="check" className="w-4 h-4 ml-1 mr-1.5" />
                               )}
                             </span>
                             <span>{item}</span>
@@ -131,8 +149,8 @@ const Services = () => {
                         ))}
                       </ul>
 
-                    <div className="flex flex-row items-center">
-                      <p className="text-black font-opensans-bold text-2xl mr-5">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
+                      <p className="text-2xl md:text-lg lg:text-2xl text-black font-opensans-bold text-center md:text-left">
                         PHP {getPriceBySize(d.price)}</p>
                       <button className="services-book-button 
                        text-lg font-opensans text-white font-extrabold border-black border-2 rounded-lg shadow-[0_9px_8px_rgba(0,0,0,0.25)]"
